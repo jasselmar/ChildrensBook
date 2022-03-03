@@ -33,7 +33,10 @@ const Home = (props: Props) => {
     initialValues: {name: '', breed: ''},
     validationSchema: HomeValidationSchema,
     onSubmit: () => {
-      navigation.push('PageViewer');
+      navigation.push('PageViewer', {
+        name: values.name,
+        breed: values.breed,
+      });
     },
   });
 
