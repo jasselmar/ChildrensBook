@@ -82,7 +82,8 @@ const Home = (props: Props) => {
             )}
             <View style={styles.button}>
               <Button
-                label={'Proceed'}
+                icon="arrow-right"
+                label={'Continue'}
                 onPress={handleSubmit}
                 textProps={{color: 'white'}}
               />
