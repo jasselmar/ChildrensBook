@@ -1,6 +1,7 @@
 import React from 'react';
 import {HomeScreenNavigationProp} from '../../types';
 import {
+  Image,
   Keyboard,
   KeyboardAvoidingView,
   Platform,
@@ -41,16 +42,23 @@ const Home = (props: Props) => {
   });
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.safeareaview}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView
+          style={styles.container}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-          <Text
-            label={'Before we start...'}
-            size={'largeTitle'}
-            textAlignment={'center'}
-            medium
+          <Image
+            source={require('../../../assets/images/paw.png')}
+            style={styles.mainImg}
           />
+          <View style={styles.title}>
+            <Text
+              label={'Before we start the story...'}
+              size={'title1'}
+              textAlignment={'center'}
+              medium
+            />
+          </View>
           <View style={styles.inputContainer}>
             <TextInput
               onChangeText={handleChange('name')}
@@ -87,10 +95,10 @@ const Home = (props: Props) => {
 };
 
 const styles = ScaledSheet.create({
-  container: {
+  safeareaview: {
+    backgroundColor: Theme.colors.background,
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: Theme.colors.background,
   },
   inputContainer: {
     ...Theme.spacers.PT_2,
@@ -98,6 +106,14 @@ const styles = ScaledSheet.create({
   },
   button: {
     ...Theme.spacers.MT_2,
+  },
+  title: {
+    ...Theme.spacers.MV_2,
+  },
+  mainImg: {
+    width: 100,
+    height: 100,
+    alignSelf: 'center',
   },
 });
 

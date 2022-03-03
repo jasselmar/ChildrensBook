@@ -6,14 +6,16 @@ import Text, {TextProps} from '../Text';
 interface Props {
   label: string;
   onPress: () => void;
+  icon?: string;
   disabled?: boolean;
   textProps?: Partial<TextProps>;
 }
 
 const Button = (props: Props) => {
-  const {label, onPress, disabled, textProps} = props;
+  const {icon, label, onPress, disabled, textProps} = props;
   return (
     <ButtonP
+      icon={icon}
       mode="contained"
       onPress={onPress}
       disabled={disabled}
