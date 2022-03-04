@@ -4,6 +4,7 @@ import {
   PageViewerScreenNavigationProp,
   MainBottomTabParamList,
   GamesScreenNavigationProp,
+  GameStackParamList,
 } from './Navigation';
 import {Theme, FontSize} from './Theme';
 import {PageItem} from './Database';
@@ -17,4 +18,5 @@ export type {
   PageItem,
   MainBottomTabParamList,
   GamesScreenNavigationProp,
+  GameStackParamList,
 };

@@ -61,6 +61,13 @@ const PageViewer = () => {
         ) : (
           pages?.map(page => <Page key={page.id + 2} page={page} />)
         )}
+        <View key={pages?.length + 2} style={styles.child}>
+          <Text
+            label={'THE END'}
+            size={'largeTitle'}
+            textAlignment={'center'}
+          />
+        </View>
       </PagerView>
     </>
   );

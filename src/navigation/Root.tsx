@@ -63,8 +63,10 @@ const Root = () => {
         tabBarStyle: {
           paddingVertical: 10,
           backgroundColor: Theme.colors.error,
-          borderTopRightRadius: 20,
-          borderTopLeftRadius: 20,
+          borderTopColor: 'transparent',
+          borderTopLeftRadius: 25,
+          borderTopRightRadius: 25,
+          marginTop: -20,
         },
       })}>
       <RootTab.Screen name="StoryStackS" component={StoryStackS} />

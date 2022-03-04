@@ -19,7 +19,7 @@ const DOGSTORY_OPTIONS: NativeStackNavigationOptions = {
   headerStyle: {
     backgroundColor: Theme.colors.background,
   },
-  headerTintColor: Theme.colors.text,
+  headerTintColor: Theme.colors.error,
 };
 
 const StoryStackS = () => {

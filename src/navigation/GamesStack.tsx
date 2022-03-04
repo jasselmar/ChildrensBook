@@ -1,11 +1,26 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationOptions,
+} from '@react-navigation/native-stack';
+import {GameStackParamList} from '../types';
+import {GamesHome} from '../screens';
+
+const GStack = createNativeStackNavigator<GameStackParamList>();
+
+const GAMES_HOME: NativeStackNavigationOptions = {
+  headerShown: false,
+};
 
 const GamesStack = () => {
   return (
-    <View>
-      <Text>GamesStack</Text>
-    </View>
+    <GStack.Navigator initialRouteName="GamesHome">
+      <GStack.Screen
+        name="GamesHome"
+        options={GAMES_HOME}
+        component={GamesHome}
+      />
+    </GStack.Navigator>
   );
 };
 

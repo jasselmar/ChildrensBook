@@ -17,7 +17,7 @@ export interface Props extends Partial<TextProps> {
 const Text = (props: Props) => {
   const {label = 'Text', size = 'body', textAlignment = 'auto', color} = props;
 
-  /* const FontWeight = useMemo(() => {
+  /*   const FontWeight = useMemo(() => {
     if (medium) {
       return {fontWeight: '600'};
     }

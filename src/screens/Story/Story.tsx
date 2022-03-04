@@ -54,6 +54,7 @@ const Story = (props: Props) => {
             <Text
               label={'Before we start the story...'}
               size={'title1'}
+              color={Theme.colors.error}
               textAlignment={'center'}
               medium
             />

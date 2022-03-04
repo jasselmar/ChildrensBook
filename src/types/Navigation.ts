@@ -12,7 +12,13 @@ type GamesScreenNavigationProp = BottomTabNavigationProp<
   'GamesStack'
 >;
 
-//Stack
+//GameStack
+
+type GameStackParamList = {
+  GamesHome: undefined;
+};
+
+//StoryStack
 type StoryStackParamList = {
   Story: undefined;
   PageViewer: undefined;
@@ -33,4 +39,5 @@ export type {
   PageViewerScreenNavigationProp,
   MainBottomTabParamList,
   GamesScreenNavigationProp,
+  GameStackParamList,
 };
