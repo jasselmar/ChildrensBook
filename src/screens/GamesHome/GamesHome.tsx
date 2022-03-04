@@ -4,6 +4,7 @@ import {ScaledSheet} from 'react-native-size-matters';
 import {Theme} from '../../theme';
 import {Text} from '../../components';
 import {Avatar} from 'react-native-paper';
+import {GStackNavigationProp} from '../../types';
 
 const Paw = () => (
   <Avatar.Icon
@@ -22,7 +23,12 @@ const Quiz = () => (
   />
 );
 
-const GamesHome = () => {
+type Props = {
+  navigation: GStackNavigationProp;
+};
+
+const GamesHome = (props: Props) => {
+  const {navigation} = props;
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <Text
@@ -33,7 +39,7 @@ const GamesHome = () => {
       />
       <View style={styles.cardContainer}>
         <TouchableOpacity
-          onPress={() => console.log('Pressed')}
+          onPress={() => navigation.navigate('HelpDog')}
           style={styles.card}>
           <Paw />
           <Text

@@ -4,12 +4,22 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 import {GameStackParamList} from '../types';
-import {GamesHome} from '../screens';
+import {GamesHome, HelpDog} from '../screens';
+import {Theme} from '../theme';
 
 const GStack = createNativeStackNavigator<GameStackParamList>();
 
 const GAMES_HOME: NativeStackNavigationOptions = {
   headerShown: false,
+};
+
+const HELP_DOG: NativeStackNavigationOptions = {
+  title: 'Help the dog',
+  headerBackTitle: '',
+  headerStyle: {
+    backgroundColor: Theme.colors.background,
+  },
+  headerTintColor: Theme.colors.error,
 };
 
 const GamesStack = () => {
@@ -20,6 +30,7 @@ const GamesStack = () => {
         options={GAMES_HOME}
         component={GamesHome}
       />
+      <GStack.Screen name="HelpDog" options={HELP_DOG} component={HelpDog} />
     </GStack.Navigator>
   );
 };

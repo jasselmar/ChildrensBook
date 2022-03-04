@@ -5,6 +5,7 @@ import {
   MainBottomTabParamList,
   GamesScreenNavigationProp,
   GameStackParamList,
+  GStackNavigationProp,
 } from './Navigation';
 import {Theme, FontSize} from './Theme';
 import {PageItem} from './Database';
@@ -19,4 +20,5 @@ export type {
   MainBottomTabParamList,
   GamesScreenNavigationProp,
   GameStackParamList,
+  GStackNavigationProp,
 };
