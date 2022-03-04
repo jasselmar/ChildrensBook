@@ -1,4 +1,5 @@
-import Home from './Home';
+import Story from './Story';
 import PageViewer from './PageViewer';
+import Quiz from './Quiz';
 
-export {Home, PageViewer};
+export {Story, PageViewer, Quiz};

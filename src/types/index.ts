@@ -1,16 +1,20 @@
 import {
-  RootStackParamList,
-  HomeScreenNavigationProp,
+  StoryStackParamList,
+  StoryScreenNavigationProp,
   PageViewerScreenNavigationProp,
+  MainBottomTabParamList,
+  GamesScreenNavigationProp,
 } from './Navigation';
 import {Theme, FontSize} from './Theme';
 import {PageItem} from './Database';
 
 export type {
-  RootStackParamList,
-  HomeScreenNavigationProp,
+  StoryStackParamList,
+  StoryScreenNavigationProp,
   PageViewerScreenNavigationProp,
   Theme,
   FontSize,
   PageItem,
+  MainBottomTabParamList,
+  GamesScreenNavigationProp,
 };

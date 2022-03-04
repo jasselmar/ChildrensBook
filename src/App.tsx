@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider as PaperProvider, DefaultTheme} from 'react-native-paper';
 import {NavigationContainer} from '@react-navigation/native';
-import Root from './navigation';
+import {Root} from './navigation';
 
 const App = () => {
   return (

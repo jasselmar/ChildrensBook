@@ -1,5 +1,5 @@
 import React from 'react';
-import {HomeScreenNavigationProp} from '../../types';
+import {StoryScreenNavigationProp} from '../../types';
 import {
   Image,
   Keyboard,
@@ -17,10 +17,10 @@ import HomeValidationSchema from '../../utils/Validation';
 import {ValidationError} from '../../components';
 
 type Props = {
-  navigation: HomeScreenNavigationProp;
+  navigation: StoryScreenNavigationProp;
 };
 
-const Home = (props: Props) => {
+const Story = (props: Props) => {
   const {navigation} = props;
   const {
     handleChange,
@@ -45,7 +45,6 @@ const Home = (props: Props) => {
     <SafeAreaView style={styles.safeareaview}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView
-          style={styles.container}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
           <Image
             source={require('../../../assets/images/paw.png')}
@@ -82,6 +81,7 @@ const Home = (props: Props) => {
             )}
             <View style={styles.button}>
               <Button
+                color={Theme.colors.error}
                 icon="arrow-right"
                 label={'Continue'}
                 onPress={handleSubmit}
@@ -118,4 +118,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default Home;
+export default Story;
