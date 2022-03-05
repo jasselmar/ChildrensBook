@@ -1,24 +1,21 @@
+import {View, SafeAreaView, useWindowDimensions, Pressable} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {Pressable, useWindowDimensions, View} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {ScaledSheet} from 'react-native-size-matters';
-import {Theme} from '../../theme';
-import {Avatar} from 'react-native-paper';
 import Animated, {
-  useSharedValue,
   useAnimatedStyle,
+  useSharedValue,
   interpolate,
   Extrapolation,
+  withRepeat,
+  withTiming,
+  Easing,
   FadeIn,
   FadeOut,
-  withRepeat,
-  Easing,
-  withTiming,
 } from 'react-native-reanimated';
-import {Text} from '../../components';
-import {Button} from '../../components';
+import {Avatar} from 'react-native-paper';
+import {Theme} from '../../theme';
 import {delay} from '../../utils/HelpDog';
-
+import {ScaledSheet} from 'react-native-size-matters';
+import {Button, Text} from '../../components';
 const Paw = () => (
   <Avatar.Icon
     size={120}
@@ -27,8 +24,7 @@ const Paw = () => (
     icon="paw"
   />
 );
-
-const HelpDog = () => {
+const HelpTheDog = () => {
   const {width, height} = useWindowDimensions();
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
@@ -134,4 +130,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default HelpDog;
+export default HelpTheDog;
