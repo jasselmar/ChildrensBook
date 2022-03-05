@@ -1,3 +1,2 @@
-import HelpDog from './HelpDog';
-
-export default HelpDog;
+import HelpTheDog from './HelpTheDog';
+export {HelpTheDog};

@@ -1,28 +1,28 @@
 import React from 'react';
 import {
-  createNativeStackNavigator,
-  NativeStackNavigationOptions,
-} from '@react-navigation/native-stack';
+  createStackNavigator,
+  StackNavigationOptions,
+} from '@react-navigation/stack';
 import {GameStackParamList} from '../types';
-import {GamesHome, HelpDog, Quiz} from '../screens';
+import {GamesHome, Quiz, HelpTheDog} from '../screens';
 import {Theme} from '../theme';
 
-const GStack = createNativeStackNavigator<GameStackParamList>();
+const GStack = createStackNavigator<GameStackParamList>();
 
-const GAMES_HOME: NativeStackNavigationOptions = {
+const GAMES_HOME: StackNavigationOptions = {
   headerShown: false,
 };
 
-const HELP_DOG: NativeStackNavigationOptions = {
+const HELP_DOG: StackNavigationOptions = {
   title: 'Help the dog',
-  headerBackTitle: '',
+  headerBackTitle: ' ',
   headerStyle: {
     backgroundColor: Theme.colors.background,
   },
   headerTintColor: Theme.colors.error,
 };
 
-const QUICK_QUIZ: NativeStackNavigationOptions = {
+const QUICK_QUIZ: StackNavigationOptions = {
   title: 'Quick quiz',
   headerBackTitle: '',
   headerStyle: {
@@ -39,7 +39,7 @@ const GamesStack = () => {
         options={GAMES_HOME}
         component={GamesHome}
       />
-      <GStack.Screen name="HelpDog" options={HELP_DOG} component={HelpDog} />
+      <GStack.Screen name="HelpDog" options={HELP_DOG} component={HelpTheDog} />
       <GStack.Screen name="Quiz" options={QUICK_QUIZ} component={Quiz} />
     </GStack.Navigator>
   );
