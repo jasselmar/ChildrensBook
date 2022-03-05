@@ -1,3 +1,5 @@
+import StoryStackS from './StoryStackS';
 import Root from './Root';
+import GamesStack from './GamesStack';
 
-export default Root;
+export {StoryStackS, GamesStack, Root};

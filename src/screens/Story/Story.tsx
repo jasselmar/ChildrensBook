@@ -1,6 +1,7 @@
 import React from 'react';
-import {HomeScreenNavigationProp} from '../../types';
+import {StoryScreenNavigationProp} from '../../types';
 import {
+  Image,
   Keyboard,
   KeyboardAvoidingView,
   Platform,
@@ -16,10 +17,10 @@ import HomeValidationSchema from '../../utils/Validation';
 import {ValidationError} from '../../components';
 
 type Props = {
-  navigation: HomeScreenNavigationProp;
+  navigation: StoryScreenNavigationProp;
 };
 
-const Home = (props: Props) => {
+const Story = (props: Props) => {
   const {navigation} = props;
   const {
     handleChange,
@@ -33,21 +34,31 @@ const Home = (props: Props) => {
     initialValues: {name: '', breed: ''},
     validationSchema: HomeValidationSchema,
     onSubmit: () => {
-      navigation.push('PageViewer');
+      navigation.push('PageViewer', {
+        name: values.name,
+        breed: values.breed,
+      });
     },
   });
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.safeareaview}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-          <Text
-            label={'Before we start...'}
-            size={'largeTitle'}
-            textAlignment={'center'}
-            medium
+          <Image
+            source={require('../../../assets/images/paw.png')}
+            style={styles.mainImg}
           />
+          <View style={styles.title}>
+            <Text
+              label={'Before we start the story...'}
+              size={'title1'}
+              color={Theme.colors.error}
+              textAlignment={'center'}
+              medium
+            />
+          </View>
           <View style={styles.inputContainer}>
             <TextInput
               onChangeText={handleChange('name')}
@@ -71,7 +82,9 @@ const Home = (props: Props) => {
             )}
             <View style={styles.button}>
               <Button
-                label={'Proceed'}
+                color={Theme.colors.error}
+                icon="arrow-right"
+                label={'Continue'}
                 onPress={handleSubmit}
                 textProps={{color: 'white'}}
               />
@@ -84,10 +97,10 @@ const Home = (props: Props) => {
 };
 
 const styles = ScaledSheet.create({
-  container: {
+  safeareaview: {
+    backgroundColor: Theme.colors.background,
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: Theme.colors.background,
   },
   inputContainer: {
     ...Theme.spacers.PT_2,
@@ -96,6 +109,14 @@ const styles = ScaledSheet.create({
   button: {
     ...Theme.spacers.MT_2,
   },
+  title: {
+    ...Theme.spacers.MV_2,
+  },
+  mainImg: {
+    width: 100,
+    height: 100,
+    alignSelf: 'center',
+  },
 });
 
-export default Home;
+export default Story;

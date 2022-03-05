@@ -4,5 +4,5 @@ export const sizes = {
   title2: 22,
   title3: 20,
   body: 17,
-  small: 13,
+  small: 14,
 };
