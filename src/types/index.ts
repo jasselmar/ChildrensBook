@@ -5,7 +5,9 @@ import {
   MainBottomTabParamList,
   GamesScreenNavigationProp,
   GameStackParamList,
-  GStackNavigationProp,
+  HelpDogNavigationProp,
+  QuizNavigationProp,
+  GamesHomeNavigationProp,
 } from './Navigation';
 import {Theme, FontSize} from './Theme';
 import {PageItem} from './Database';
@@ -20,5 +22,7 @@ export type {
   MainBottomTabParamList,
   GamesScreenNavigationProp,
   GameStackParamList,
-  GStackNavigationProp,
+  HelpDogNavigationProp,
+  QuizNavigationProp,
+  GamesHomeNavigationProp,
 };

@@ -4,7 +4,7 @@ import {
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
 import {GameStackParamList} from '../types';
-import {GamesHome, HelpDog} from '../screens';
+import {GamesHome, HelpDog, Quiz} from '../screens';
 import {Theme} from '../theme';
 
 const GStack = createNativeStackNavigator<GameStackParamList>();
@@ -22,6 +22,15 @@ const HELP_DOG: NativeStackNavigationOptions = {
   headerTintColor: Theme.colors.error,
 };
 
+const QUICK_QUIZ: NativeStackNavigationOptions = {
+  title: 'Quick quiz',
+  headerBackTitle: '',
+  headerStyle: {
+    backgroundColor: Theme.colors.background,
+  },
+  headerTintColor: Theme.colors.error,
+};
+
 const GamesStack = () => {
   return (
     <GStack.Navigator initialRouteName="GamesHome">
@@ -31,6 +40,7 @@ const GamesStack = () => {
         component={GamesHome}
       />
       <GStack.Screen name="HelpDog" options={HELP_DOG} component={HelpDog} />
+      <GStack.Screen name="Quiz" options={QUICK_QUIZ} component={Quiz} />
     </GStack.Navigator>
   );
 };

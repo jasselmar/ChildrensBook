@@ -110,7 +110,7 @@ const HelpDog = () => {
           </View>
         </Animated.View>
       )}
-      <Animated.View entering={FadeIn} style={[styles.box, animatedStyles]}>
+      <Animated.View entering={FadeIn} style={[animatedStyles]}>
         <Pressable disabled={!playing} onPress={() => setScore(score + 1)}>
           <Paw />
         </Pressable>
@@ -126,7 +126,6 @@ const styles = ScaledSheet.create({
     alignItems: 'center',
     backgroundColor: Theme.colors.background,
   },
-  box: {},
   score: {
     ...Theme.spacers.MT_2,
   },

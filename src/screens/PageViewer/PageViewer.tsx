@@ -59,9 +59,9 @@ const PageViewer = () => {
             </View>
           </View>
         ) : (
-          pages?.map(page => <Page key={page.id + 2} page={page} />)
+          pages?.map(page => <Page key={page.id} page={page} />)
         )}
-        <View key={pages?.length + 2} style={styles.child}>
+        <View style={styles.child}>
           <Text
             label={'THE END'}
             size={'largeTitle'}

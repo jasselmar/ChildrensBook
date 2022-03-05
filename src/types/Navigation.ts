@@ -17,12 +17,20 @@ type GamesScreenNavigationProp = BottomTabNavigationProp<
 type GameStackParamList = {
   GamesHome: undefined;
   HelpDog: undefined;
+  Quiz: undefined;
 };
 
-type GStackNavigationProp = NativeStackNavigationProp<
+type GamesHomeNavigationProp = NativeStackNavigationProp<
+  GameStackParamList,
+  'GamesHome'
+>;
+
+type HelpDogNavigationProp = NativeStackNavigationProp<
   GameStackParamList,
   'HelpDog'
 >;
+
+type QuizNavigationProp = NativeStackNavigationProp<GameStackParamList, 'Quiz'>;
 
 //StoryStack
 type StoryStackParamList = {
@@ -46,5 +54,7 @@ export type {
   MainBottomTabParamList,
   GamesScreenNavigationProp,
   GameStackParamList,
-  GStackNavigationProp,
+  HelpDogNavigationProp,
+  QuizNavigationProp,
+  GamesHomeNavigationProp,
 };

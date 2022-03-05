@@ -4,7 +4,7 @@ import {ScaledSheet} from 'react-native-size-matters';
 import {Theme} from '../../theme';
 import {Text} from '../../components';
 import {Avatar} from 'react-native-paper';
-import {GStackNavigationProp} from '../../types';
+import {GamesHomeNavigationProp} from '../../types';
 
 const Paw = () => (
   <Avatar.Icon
@@ -24,7 +24,7 @@ const Quiz = () => (
 );
 
 type Props = {
-  navigation: GStackNavigationProp;
+  navigation: GamesHomeNavigationProp;
 };
 
 const GamesHome = (props: Props) => {
@@ -57,7 +57,9 @@ const GamesHome = (props: Props) => {
             />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Quiz')}
+          style={styles.card}>
           <Quiz />
           <Text
             label={'Quick quiz'}
