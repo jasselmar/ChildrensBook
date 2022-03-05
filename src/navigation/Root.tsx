@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  BottomTabNavigationOptions,
-  createBottomTabNavigator,
-} from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import StoryStackS from './StoryStackS';
 import GamesStack from './GamesStack';
 import {MainBottomTabParamList} from '../types';

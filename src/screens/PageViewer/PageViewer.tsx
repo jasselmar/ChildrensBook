@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Image} from 'react-native';
-//import {PageViewerScreenNavigationProp} from '../../types';
 import PagerView from 'react-native-pager-view';
 import {ScaledSheet} from 'react-native-size-matters';
 import {Page, Text} from '../../components';
@@ -8,10 +7,6 @@ import {Theme} from '../../theme';
 import {useRoute} from '@react-navigation/native';
 import {ActivityIndicator, Snackbar} from 'react-native-paper';
 import {useSQLite} from '../../hooks';
-
-/* type Props = {
-  navigation: PageViewerScreenNavigationProp;
-}; */
 
 const PageViewer = () => {
   const {params} = useRoute();
